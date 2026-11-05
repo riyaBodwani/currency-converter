@@ -70,7 +70,7 @@ function updateCurrencyDecorations() {
 
 async function getRates(base) {
   if (ratesCache[base]) return ratesCache[base];
-  const response = await fetch(`https://api.frankfurter.app/latest?from=${encodeURIComponent(base)}`);
+  const response = await fetch(`https://api.frankfurter.dev/v1/latest?base=${encodeURIComponent(base)}`);
   if (!response.ok) throw new Error("Exchange rates could not be loaded.");
   const data = await response.json();
   ratesCache[base] = data.rates;
