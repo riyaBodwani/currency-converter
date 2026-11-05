@@ -38,14 +38,13 @@ const convertButton = document.getElementById("convert-button");
 let ratesCache = {};
 
 function formatNumber(value, currency) {
-  const noDecimals = currency === "JPY" || currency === "KRW";
+    const noDecimals = currency === "JPY" || currency === "KRW";
 
-  return new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: noDecimals ? 0 : 2,
-    minimumFractionDigits: noDecimals ? 0 : 2
-  }).format(value);
+    return new Intl.NumberFormat("en-US", {
+        maximumFractionDigits: noDecimals ? 0 : 2,
+        minimumFractionDigits: noDecimals ? 0 : 2
+    }).format(value);
 }
-
 function populateCurrencies() {
   const codes = Object.keys(currencyNames).sort();
   for (const select of [fromSelect, toSelect]) {
