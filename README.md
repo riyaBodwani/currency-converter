@@ -1,33 +1,59 @@
-# Currencyly — Currency Converter
+# 💱 Currencyly — Currency Converter
 
-A responsive currency conversion web app with a clean, modern interface and up-to-date exchange rates from the Frankfurter API.
+A modern, responsive currency conversion web application that allows users to convert currencies using daily exchange rates. Built with a clean UI/UX for a smooth and intuitive user experience.
 
-## Features
-- Convert between popular world currencies
-- Live/latest exchange rates fetched from the Frankfurter API
-- Swap currencies with one click
-- Quick-look cards for popular currencies
-- Responsive layout for desktop and mobile
-- Friendly loading and error states
+## 🌐 Live Demo
 
-## Tech Stack
+[**Try Currencyly Here →**](https://riyabodwani.github.io/currency-converter/)
+
+## ✨ Features
+
+- Real-time user interaction with currency conversion
+- Daily exchange rates through Exchange Rate API
+- Support for multiple international currencies
+- Currency swapping functionality
+- Popular currency quick-look section
+- Responsive design for desktop and mobile devices
+- Clean and user-friendly interface
+
+## 🛠️ Technologies Used
+
 - HTML5
 - CSS3
-- JavaScript (Fetch API)
-- [Frankfurter API](https://www.frankfurter.app/)
+- JavaScript
+- Exchange Rate API
+- GitHub Pages
 
-## Run Locally
-1. Download or clone this repository.
-2. Open `index.html` in your browser.
-3. Choose currencies and enter an amount.
+## 📸 Preview
 
-No API key is required. Internet access is needed to retrieve exchange rates.
+Visit the live demo to explore the application.
 
-## Deploy with GitHub Pages
-1. Push these files to the `main` branch of a public repository.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Select `main` and `/ (root)`, then click **Save**.
+## 🚀 Getting Started
 
-## Note
-Exchange rates are indicative reference rates. Banks and payment providers may apply their own rates or fees.
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/riyaBodwani/currency-converter.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd currency-converter
+   ```
+
+3. Open `index.html` in your browser.
+
+## 📡 API
+
+Exchange rates are fetched from [Exchange Rate API](https://www.exchangerate-api.com/).
+
+## 👩‍💻 Author
+
+**Riya Bodwani**
+
+[GitHub Profile](https://github.com/riyaBodwani)
+
+---
+
+⭐ If you like this project, consider giving it a star!
