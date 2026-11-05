@@ -38,9 +38,11 @@ const convertButton = document.getElementById("convert-button");
 let ratesCache = {};
 
 function formatNumber(value, currency) {
+  const noDecimals = currency === "JPY" || currency === "KRW";
+
   return new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: currency === "JPY" || currency === "KRW" ? 0 : 2,
-    minimumFractionDigits: 2
+    maximumFractionDigits: noDecimals ? 0 : 2,
+    minimumFractionDigits: noDecimals ? 0 : 2
   }).format(value);
 }
 
