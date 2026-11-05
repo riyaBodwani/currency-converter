@@ -24,10 +24,6 @@ A modern, responsive currency conversion web application that allows users to co
 - Exchange Rate API
 - GitHub Pages
 
-## 📸 Preview
-
-Visit the live demo to explore the application.
-
 ## 🚀 Getting Started
 
 1. Clone the repository:
