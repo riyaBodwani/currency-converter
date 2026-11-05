@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Currencyly — Currency Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <nav class="topbar">
+      <a class="brand" href="#" aria-label="Currencyly home">
+        <span class="brand-mark"><span>↗</span></span>
+        <span>currencyly</span>
+      </a>
+      <div class="nav-right"><span class="live-dot"></span><span>Live exchange rates</span></div>
+    </nav>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-icon">✦</span> SMART MONEY, ANYWHERE</div>
+      <h1>Currency conversion,<br><span>made simple.</span></h1>
+      <p class="hero-copy">Know what your money is worth. Convert currencies with up-to-date exchange rates in a few clicks.</p>
+    </section>
+
+    <section class="converter-card" aria-label="Currency converter">
+      <div class="card-heading">
+        <div><p class="section-label">CONVERTER</p><h2>Exchange currencies</h2></div>
+        <div class="rate-status" id="rate-status"><span class="status-dot"></span> Getting rates…</div>
+      </div>
+
+      <div class="amount-label">You send</div>
+      <div class="currency-row">
+        <div class="currency-select-wrap">
+          <span class="flag" id="from-flag">🇺🇸</span>
+          <select id="from-currency" aria-label="From currency"></select>
+          <span class="chevron">⌄</span>
+        </div>
+        <label class="amount-wrap"><span class="currency-symbol" id="from-symbol">$</span><input id="amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert"></label>
+      </div>
+
+      <div class="swap-row">
+        <div class="line"></div>
+        <button class="swap-button" id="swap-button" type="button" aria-label="Swap currencies" title="Swap currencies">⇅</button>
+        <div class="line"></div>
+      </div>
+
+      <div class="amount-label">They receive</div>
+      <div class="currency-row result-row">
+        <div class="currency-select-wrap">
+          <span class="flag" id="to-flag">🇮🇳</span>
+          <select id="to-currency" aria-label="To currency"></select>
+          <span class="chevron">⌄</span>
+        </div>
+        <div class="amount-wrap result-amount"><span class="currency-symbol" id="to-symbol">₹</span><output id="converted-amount" aria-live="polite">—</output></div>
+      </div>
+
+      <div class="rate-box">
+        <div class="rate-icon">↗</div>
+        <div class="rate-copy"><span class="rate-caption">Exchange rate</span><strong id="rate-text">1 USD = — INR</strong></div>
+        <span class="rate-tag">MID-MARKET</span>
+      </div>
+
+      <button class="convert-button" id="convert-button" type="button">Convert currency <span>→</span></button>
+      <p class="disclaimer">Rates are provided by Frankfurter. Your bank or provider may use a different rate.</p>
+    </section>
+
+    <section class="quick-section">
+      <div class="quick-heading"><div><p class="section-label">QUICK LOOK</p><h3>Popular currencies</h3></div><span class="quick-note">Based on USD</span></div>
+      <div class="quick-grid" id="quick-grid">
+        <article class="quick-card"><span class="quick-flag">🇪🇺</span><div><span class="quick-code">EUR</span><strong class="quick-value">Loading…</strong><span class="quick-name">Euro</span></div></article>
+        <article class="quick-card"><span class="quick-flag">🇬🇧</span><div><span class="quick-code">GBP</span><strong class="quick-value">Loading…</strong><span class="quick-name">British Pound</span></div></article>
+        <article class="quick-card"><span class="quick-flag">🇮🇳</span><div><span class="quick-code">INR</span><strong class="quick-value">Loading…</strong><span class="quick-name">Indian Rupee</span></div></article>
+        <article class="quick-card"><span class="quick-flag">🇯🇵</span><div><span class="quick-code">JPY</span><strong class="quick-value">Loading…</strong><span class="quick-name">Japanese Yen</span></div></article>
+      </div>
+    </section>
+
+    <footer><span class="footer-brand">currencyly<span>.</span></span><span>Built with care & a little math.</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
