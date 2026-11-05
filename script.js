@@ -134,17 +134,40 @@ async function convertCurrency() {
 
 async function loadQuickRates() {
   const cards = document.querySelectorAll(".quick-card");
+  const targets = ["EUR", "GBP", "INR", "JPY"];
+
   try {
-    const rates = await getRates("USD");
-    const targets = ["EUR", "GBP", "INR", "JPY"];
+    const response = await fetch(
+      "https://open.er-api.com/v6/latest/USD"
+    );
+
+    if (!response.ok) {
+      throw new Error("Could not fetch rates");
+    }
+
+    const data = await response.json();
+
+    if (data.result !== "success") {
+      throw new Error("API error");
+    }
+
     cards.forEach((card, index) => {
       const code = targets[index];
-      const value = rates[code];
+      const value = data.rates[code];
+
       card.querySelector(".quick-value").textContent =
-        value ? `${currencySymbols[code] || ""}${formatNumber(value, code)}` : "—";
+        value
+          ? `${currencySymbols[code] || ""}${formatNumber(value, code)}`
+          : "Unavailable";
     });
-  } catch {
-    cards.forEach(card => card.querySelector(".quick-value").textContent = "Unavailable");
+
+  } catch (error) {
+    console.error("Popular currencies error:", error);
+
+    cards.forEach(card => {
+      card.querySelector(".quick-value").textContent =
+        "Unavailable";
+    });
   }
 }
 
